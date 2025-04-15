@@ -464,6 +464,7 @@ section span:hover {
 
 h2 {
     text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     letter-spacing: 0.2em;
 }
