@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Email Validation</title>
+  <style>
+    input {
+      padding: 8px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+    .emailinvalid {
+      border-color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="signForm">
+    <input type="email" id="reg-email" placeholder="Enter your email" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('signForm');
+    const reg-email = document.getElementById('reg-email');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const emailValue = reg-email.value;
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailPattern.test(emailValue)) {
+        reg-email.classList.add('emailinvalid');
+      } else {
+        reg-email.classList.remove('emailinvalid');
+        alert("Email is valid!");
+      }
+    });
+  </script>
+
+</body>
+</html>
